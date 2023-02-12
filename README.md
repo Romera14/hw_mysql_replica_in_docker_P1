@@ -17,9 +17,9 @@
 
 * Делал через docker-compose, плейбук, bash-скрипт и конфинурационные файлы в репозитории.
 
-![]()
-![]()
-![]()
+![](https://github.com/Romera14/hw_mysql_replica_in_docker_P1/blob/main/screenshots/master.png)
+![](https://github.com/Romera14/hw_mysql_replica_in_docker_P1/blob/main/screenshots/slave1.png)
+![](https://github.com/Romera14/hw_mysql_replica_in_docker_P1/blob/main/screenshots/slave2.png)
 
 Дополнительные задания (со звёздочкой*)
 
