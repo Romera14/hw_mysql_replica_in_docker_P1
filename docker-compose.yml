@@ -1,0 +1,34 @@
+version: "3"
+services:
+  node1:
+    image: mysql:latest
+    container_name: node1
+    hostname: node1
+    environment:             
+    - MYSQL_ROOT_PASSWORD=abcd     
+    volumes:
+      - mysqldata_master:/var/lib/mysql
+      - ./master1.cnf:/etc/my.cnf
+    networks:
+      - subnet1
+
+  node2:
+    image: mysql:latest
+    container_name: node2
+    hostname: node2
+    environment:                               
+    - MYSQL_ROOT_PASSWORD=abcd  
+    depends_on:
+      - node1
+    volumes:
+      - mysqldata_slave:/var/lib/mysql
+      - ./slave1.cnf:/etc/my.cnf
+    networks:
+      - subnet1
+
+networks:
+  subnet1:
+
+volumes:
+  mysqldata_master:
+  mysqldata_slave:
